@@ -51,6 +51,11 @@ jobs:
       #   run: |
       #     python -m unittest discover -s tests
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "kashrafali97@gmail.com"
+          git config --global user.name "ashraf8ila"
+
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
