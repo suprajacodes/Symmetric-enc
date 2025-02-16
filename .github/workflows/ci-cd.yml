@@ -59,7 +59,8 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           cd frontend
+          git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
           API_KEY: ${{ secrets.API_KEY }}
