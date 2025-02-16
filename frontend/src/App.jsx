@@ -12,7 +12,7 @@ function App() {
     e.preventDefault();
     console.log('Sending request to backend with text:', text);
     try {
-      const response = await axios.post('http://localhost:5000/encrypt', { text });
+      const response = await axios.post('/encrypt', { text });
       console.log('Received response from backend:', response.data);
       if (response.data.error) {
         setError(response.data.error);
