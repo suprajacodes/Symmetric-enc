@@ -3,6 +3,9 @@ warnings.filterwarnings("ignore")
 import time, base64, json, requests, argparse, os
 from flask import Flask, request as flask_request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
 
 BASE_URL="https://amer.smartkey.io"
 
