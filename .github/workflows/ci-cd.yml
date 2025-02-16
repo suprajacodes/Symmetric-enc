@@ -32,10 +32,10 @@ jobs:
           cd frontend
           npm run build
 
-      # - name: Run frontend tests
-      #   run: |
-      #     cd frontend
-      #     npm test -- --watchAll=false
+      - name: Run frontend tests
+        run: |
+          cd frontend
+          npm test -- --watchAll=false
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -47,9 +47,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # - name: Run backend tests
-      #   run: |
-      #     python -m unittest discover -s tests
+      - name: Run backend tests
+        run: |
+          python -m unittest discover -s tests
 
       - name: Configure Git
         run: |
