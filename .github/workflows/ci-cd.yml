@@ -31,11 +31,6 @@ jobs:
           cd frontend
           npm install
 
-      - name: Install cross-env
-        run: |
-          cd frontend
-          npm install cross-env
-
       - name: Build frontend
         run: |
           cd frontend
