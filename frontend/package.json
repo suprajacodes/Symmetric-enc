@@ -10,11 +10,11 @@
     "frontend": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "concurrently \"cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start --host 0.0.0.0\" \"pip install -r ../requirements.txt && python ../ass2api.py\"",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "start": "concurrently \"react-scripts start --host 0.0.0.0\" \"pip install -r ../requirements.txt && python ../ass2api.py\"",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
